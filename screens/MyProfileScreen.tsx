@@ -9,8 +9,8 @@ const MyProfileScreen: React.FC = () => {
     source={require('../assets/myProfile.png')}
     style={styles.backgroundImage}
   >
-    <View>
-      <Text>My Avois Screen</Text>
+  <View style={styles.container}>
+      <Text style={styles.headerText}>My Profile Screen</Text>
     </View>
     </ImageBackground>
   );
@@ -18,19 +18,24 @@ const MyProfileScreen: React.FC = () => {
 export default MyProfileScreen;
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch' or 'contain'
-    justifyContent: 'center',
-  },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingTop: 100,
+    paddingHorizontal: 20,
   },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
-    color: 'white', // Adjust text color as needed
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
   },
-});
+    headerText: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: 20,
+      color: 'white'
+    },
+  });
+

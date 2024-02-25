@@ -11,39 +11,14 @@ import ProfileScreen from '../screens/MyProfileScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
-
 const AppContainer: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="HomeTab">
-          {() => (
-            <Stack.Navigator>
-              <Stack.Screen name="HomeScreen" component={HomeScreen} />
-            </Stack.Navigator>
-          )}
-        </Tab.Screen>
-        <Tab.Screen name="MyTripsTab">
-          {() => (
-            <Stack.Navigator>
-              <Stack.Screen name="MyTripsScreen" component={MyTripsScreen} />
-            </Stack.Navigator>
-          )}
-        </Tab.Screen>
-        <Tab.Screen name="MyAvoisTab">
-          {() => (
-            <Stack.Navigator>
-              <Stack.Screen name="MyAvoisScreen" component={MyAvoisScreen} />
-            </Stack.Navigator>
-          )}
-        </Tab.Screen>
-        <Tab.Screen name="ProfileTab">
-          {() => (
-            <Stack.Navigator>
-              <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
-            </Stack.Navigator>
-          )}
-        </Tab.Screen>
+        <Tab.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="MyTrips" component={MyTripsScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="MyAvois" component={MyAvoisScreen} options={{ headerShown: false }} />
+        <Tab.Screen name="Profile" component={ProfileScreen} options={{ headerShown: false }} />
       </Tab.Navigator>
     </NavigationContainer>
   );

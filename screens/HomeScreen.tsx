@@ -1,44 +1,41 @@
 // HomeScreen.tsx
-
 import React from 'react';
-import { View, Text, ImageBackground, Button, StyleSheet } from 'react-native';
-
+import { View, Image, StyleSheet, Text, ImageBackground } from 'react-native';
 
 const HomeScreen: React.FC = () => {
   return (
     <ImageBackground
-      source={require('../assets/hotel.png')}
-      style={styles.backgroundImage}
-    >
-      <View style={styles.container}>
-        <Text style={styles.text}>Hello</Text>
-        <Button
-          title="Your Button"
-          onPress={() => {
-            // Add your button functionality here
-          }}
-        />
-      </View>
+    source={require('../assets/hotel.png')}
+    style={styles.backgroundImage}
+  >
+    <View style={styles.container}>
+      <Text style={styles.headerText}>My Home Screen</Text>
+    </View>
     </ImageBackground>
   );
 };
 
+
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover', // or 'stretch' or 'contain'
-    justifyContent: 'center',
-  },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    paddingTop: 500,
+    paddingHorizontal: 20,
   },
-  text: {
-    fontSize: 18,
-    marginBottom: 20,
-    color: 'white', // Adjust text color as needed
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
   },
-});
+    headerText: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      marginBottom: 20,
+      color: 'white'
+    },
+  });
 
 export default HomeScreen;
