@@ -3,10 +3,11 @@
 import React from 'react';
 import { View, Text, ImageBackground, Button, StyleSheet } from 'react-native';
 
+
 const HomeScreen: React.FC = () => {
   return (
     <ImageBackground
-      source={require('./assets/hotel.png')}
+      source={require('../assets/hotel.png')}
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
