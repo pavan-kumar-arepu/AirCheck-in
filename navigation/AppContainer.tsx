@@ -1,5 +1,4 @@
 // AppContainer.tsx
-// AppContainer.tsx
 
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
@@ -17,31 +16,31 @@ const AppContainer: React.FC = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home">
+        <Tab.Screen name="HomeTab">
           {() => (
             <Stack.Navigator>
-              <Stack.Screen name="Home" component={HomeScreen} />
+              <Stack.Screen name="HomeScreen" component={HomeScreen} />
             </Stack.Navigator>
           )}
         </Tab.Screen>
-        <Tab.Screen name="MyTrips">
+        <Tab.Screen name="MyTripsTab">
           {() => (
             <Stack.Navigator>
-              <Stack.Screen name="MyTrips" component={MyTripsScreen} />
+              <Stack.Screen name="MyTripsScreen" component={MyTripsScreen} />
             </Stack.Navigator>
           )}
         </Tab.Screen>
-        <Tab.Screen name="MyAvois">
+        <Tab.Screen name="MyAvoisTab">
           {() => (
             <Stack.Navigator>
-              <Stack.Screen name="MyAvois" component={MyAvoisScreen} />
+              <Stack.Screen name="MyAvoisScreen" component={MyAvoisScreen} />
             </Stack.Navigator>
           )}
         </Tab.Screen>
-        <Tab.Screen name="Profile">
+        <Tab.Screen name="ProfileTab">
           {() => (
             <Stack.Navigator>
-              <Stack.Screen name="Profile" component={ProfileScreen} />
+              <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
             </Stack.Navigator>
           )}
         </Tab.Screen>

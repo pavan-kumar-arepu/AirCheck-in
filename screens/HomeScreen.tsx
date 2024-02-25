@@ -11,7 +11,7 @@ const HomeScreen: React.FC = () => {
       style={styles.backgroundImage}
     >
       <View style={styles.container}>
-        <Text style={styles.text}>Your Text Here</Text>
+        <Text style={styles.text}>Hello</Text>
         <Button
           title="Your Button"
           onPress={() => {
